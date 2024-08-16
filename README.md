@@ -39,63 +39,79 @@ void loop() {
   Serial.println(digitalRead(buttonPin));
  
   if (buttonState==LOW) {
+  
     // calling the function for blinking of the individual letters of my name
+    
     blinkA();
     blinkN();
     blinkS();
     blinkH();
+    
   }
   else
   {
     
     digitalWrite(LED_BUILTIN,LOW);
+    
   }
  
 }
 
 // creating a procedure for dot 
 void blinkdot() {
+
   digitalWrite(LED_BUILTIN, HIGH);
   delay(shortBlink);
   digitalWrite(LED_BUILTIN, LOW);
   delay(ElementDelay);
+  
 }
 
 // creating a procedure for dash
 void blinkdash() {
+
   digitalWrite(LED_BUILTIN, HIGH);
   delay(longBlink);
   digitalWrite(LED_BUILTIN, LOW);
   delay(ElementDelay);
+  
 }
 
 // creating a procedure for blinking A whose morse code is ".-"
 void blinkA() {
+
   blinkdot();
   blinkdash();
   delay(LetterDelay);
+  
 }
 
 // creating a procedure for blinking A whose morse code is "-."
 void blinkN() {
+
   blinkdash();
   blinkdot();
   delay(LetterDelay);
+  
 }
 
 // creating a procedure for blinking A whose morse code is "..."
 void blinkS() {
+
   blinkdot();
   blinkdot();
   blinkdot();
   delay(LetterDelay);
+  
 }
 
 // creating a procedure for blinking A whose morse code is "...."
 void blinkH() {
+
   blinkdot();
   blinkdot();
   blinkdot();
   blinkdot();
   delay(LetterDelay);
+  
 }
